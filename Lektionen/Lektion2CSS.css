@@ -1,0 +1,20 @@
+* {
+
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span {
+    background-color: yellow;
+
+    border-style: dashed;
+}
+
+.Einleitung {
+
+    background-color: rgb(39, 168, 129);
+    outline-style: dotted;
+    outline-width: 5px;
+    outline-offset: 3px;
+    outline-color: rgb(128, 0, 0);
+}

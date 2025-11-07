@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    :root {
+        --g: linear-gradient(45deg, #ff0066, #ffcc00, #33ff99, #00ccff, #cc66ff);
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background: var(--g);
+        background-size: 400% 400%;
+        animation: bg 8s linear infinite;
+    }
+
+    h1,
+    p {
+        font-family: system-ui, Segoe UI, Arial, sans-serif;
+        color: #fff;
+        text-shadow: 0 2px 10px #0008;
+        mix-blend-mode: overlay;
+    }
+
+    .card {
+        padding: 3rem;
+        border-radius: 2rem;
+        background: #ffffff22;
+        backdrop-filter: blur(6px);
+        box-shadow: 0 20px 60px #0005;
+        transform: rotate(-2deg)
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .8rem 1.2rem;
+        border-radius: 999px;
+        background: #0000;
+        border: 3px dashed #fff;
+        font-weight: 800;
+        letter-spacing: .08em;
+        cursor: pointer
+    }
+
+    .btn:hover {
+        filter: hue-rotate(90deg) brightness(1.2);
+        transform: scale(1.06) rotate(3deg)
+    }
+
+    @keyframes bg {
+        0% {
+            background-position: 0 0
+        }
+
+        100% {
+            background-position: 500% 0
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>🌈 Hallöchen, Farbrausch!</h1>
+        <p>Klick den Knopf für Vibes <a href="../index.html">Home</a> ✨</p><a class="btn"
+            onclick="document.body.style.filter='hue-rotate('+Math.floor(Math.random()*360)+'deg)'">KALEIDO-BOOST</a>
+    </div>
+    <canvas id="confetti"></canvas>
+    <script>for (let i = 0; i < 120; i++) { let s = document.createElement('div'); s.style = `position:fixed;top:-10px;left:${Math.random() * 100}vw;width:6px;height:14px;background:hsla(${360 * Math.random()},90%,60%,.9);transform:rotate(${360 * Math.random()}deg);animation:fall ${3 + Math.random() * 5}s linear infinite ${Math.random() * 2}s`; document.body.appendChild(s) }; let st = document.createElement('style'); st.textContent = '@keyframes fall{from{transform:translateY(-10vh) rotate(0)}to{transform:translateY(110vh) rotate(720deg)}}'; document.head.appendChild(st);</script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+body {
+
+    background-image: url(Bilder/FlorianStettler/BG1.jpg);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
+div {
+
+    color: white;
+    font-size: 70px;
+}
+
+div.title {
+
+    color: rgb(187, 16, 135);
+    font-size: 55px;
+}
+
+.topic {
+    font-size: 40px;
+}
+
+
+p {
+
+    color: white;
+    font-size: 25px;
+    margin: auto;
+}
+
+p.welcome {
+    font-size: 20px;
+}
+
+
+pre {
+
+    color: white;
+    font-size: 25px;
+    margin: auto;
+}
+
+.topic {
+
+    font-size: 40px;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: rgb(187, 16, 135)
+}
+
+a:hover {
+    color: white;
+    cursor: grab
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* a.link-blog:hover {
+
+    flood-color: white;
+}
+
+.florian-link:hover {
+    font-size: 25px;
+    text-decoration: underline;
+
+}
+
+a:-webkit-any-link {
+    color: rgb(187, 16, 135);
+    text-decoration: none;
+}*/
+
+
+
+
+
+/*  index
+div {
+
+     color: white;
+     font-size: 70px;
+ }
+
+ body {
+     background-image: url(Bilder/FlorianStettler/BG1.jpg);
+     size: 5;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+} */

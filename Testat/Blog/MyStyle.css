@@ -15,8 +15,9 @@ div {
 
 div.title {
 
-    color: rgb(187, 16, 135);
-    font-size: 55px;
+    color: rgba(187, 16, 135);
+        font-size: 55px;
+        text-shadow: 2px 2px 2px rgb(190, 144, 177);
 }
 
 .topic {
@@ -47,6 +48,7 @@ pre {
 
     font-size: 40px;
 }
+
 
 
 

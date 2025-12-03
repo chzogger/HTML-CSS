@@ -1,6 +1,7 @@
 body {
 
     background-image: url(Bilder/FlorianStettler/BG1.jpg);
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -44,6 +45,29 @@ pre {
     margin: auto;
 }
 
+table {
+    color: white;
+    font-size: 25px;
+    margin: auto;
+
+
+}
+
+
+
+th {
+    font-size: 35px;
+
+
+}
+
+td {
+
+    padding-top: 10px;
+
+
+
+}
 .topic {
 
     font-size: 40px;

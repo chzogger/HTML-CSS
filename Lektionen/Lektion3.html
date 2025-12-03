@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lektion3.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <table border="1"> <!--alte Schreiweise-->
+        <tr>
+            <td>Nr.</td>
+            <th colspan="3">Das ist ein langer Titel</th>
+
+        <tr>
+
+            <td>1</td>
+            <td colspan="3">2</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td colspan="2" rowspan="3">5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+        </tr>
+
+        <tr></tr>
+    </table>
+
+    <br>
+    <br>
+
+
+
+
+
+    <table border="1"> <!--neue Schreibweise-->
+        <thead>
+            <th>Titel 1</th>
+            <th>Titel 2</th>
+            <th>Titel 3</th>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>1</td>
+                <td colspan="3">2</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td colspan="2" rowspan="3">5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="3">Füsse</td>
+        </tfoot>
+
+
+    </table>
+
+    <br>
+
+    <table>
+
+    </table>
+
+
+
+    <form action="Lektion3.html" method="get">
+        <label>Vorname
+            <input type="text" name="vorname" placeholder="Vorname" style="font-family: cursive;"></label>
+        <label>Passwort:
+            <input type="password" placeholder="Password" style="font-family: cursive;"></label>
+        <label>Nachname:
+            <input type="text" name="nachname" placeholder="Nachnme" style="font-family:fantasy;"></label>
+        <br>
+        <br>
+        <label> Wünsche Sie eine kostenlose Beratung?
+            <input type="checkbox">
+        </label>
+
+        <br>
+        <br>
+        <input type="submit" name="speichern" value="Absenden !" id="" style="background-color: cyan;">
+
+
+
+    </form>
+
+
+</body>
+
+</html>

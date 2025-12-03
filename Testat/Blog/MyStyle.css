@@ -49,9 +49,37 @@ table {
     color: white;
     font-size: 25px;
     margin: auto;
+
+}
+
+form {
+    padding-left: 20px;
+
+    color: white;
+    font-size: 25px;
+}
+
+label {
+
+    margin-right: 30px;
+
+}
+
+input {
+
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+textarea.TextFeld {
+    display: block;
+    width: 800px;
+    height: 500px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     
-
-
 }
 
 

@@ -49,6 +49,7 @@ table {
     color: white;
     font-size: 25px;
     margin: auto;
+    
 
 
 }
@@ -56,18 +57,41 @@ table {
 
 
 th {
-    font-size: 35px;
-
-
+font-size: 35px;
+border-style: groove;
+    border-width: medium;
+    border-color: white;
+    margin: auto;
 }
 
 td {
-
     padding-top: 10px;
-
-
-
+    border-style: dotted;
+    border-width: thin;
 }
+
+td.time {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+    border-color: white;
+}
+
+/*td.job {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+    border-color: white;
+}
+
+th.deko {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+}
+
+*/
+
+
+
+        
 .topic {
 
     font-size: 40px;

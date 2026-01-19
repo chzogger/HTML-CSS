@@ -36,7 +36,7 @@ font-family: "Google Sans", sans-serif;
 text-shadow: 2px 2px 2px rgb(190, 144, 177);
 }
 
-table.hobbies {}
+
 
 table.hobbies tr td {
     max-width: 600px;
@@ -79,9 +79,7 @@ p.welcome {
     font-family: "Google Sans", sans-serif;
     }
     
-    p.inline {
-        borde: in;
-}
+
 
 
 pre {

@@ -1,10 +1,18 @@
 body {
 
-    background-image: url(Bilder/FlorianStettler/BG1.jpg);
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+background-image: url("Bilder/FlorianStettler/BG1.jpg");
+    background-size: cover;
+    /* Bild füllt den Bildschirm */
+    background-position: center;
+    /* Bild bleibt zentriert */
+    background-repeat: no-repeat;
+    /* kein Kacheln */
+    background-attachment: fixed;
+    /* optional: bleibt beim Scrollen stehen */
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
 
 
 
@@ -25,6 +33,14 @@ div.title {
     font-size: 40px;
 }
 
+ul.title {
+
+    color: rgba(187, 16, 135);
+    font-size: 55px;
+    text-shadow: 2px 2px 2px rgb(224, 210, 220);
+    text-align: center;
+    list-style-type: none;
+}
 
 p {
 
@@ -59,30 +75,49 @@ form {
     font-size: 25px;
 }
 
-label {
-
-    margin-right: 30px;
-
-}
-
-input {
-
-    margin-top: 20px;
-    font-size: 20px;
-}
-
 textarea.TextFeld {
     display: block;
     width: 800px;
     height: 500px;
     margin-top: 10px;
     font-size: 25px;
+    border: solid 2px rgb(187, 16, 135);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+div.formular {
+
+    display: inline-block;
+        font-size: 30px;
+        padding: 10px;
+}
+
+.formular input[type="checkbox"] {
+    transform: scale(1.5);
+}
+.formular input[type="submit"] {
     
+    font-size: 25px;
+    background-color: rgba(187, 16, 135)"
+    
+    }
+
+.formular label {
+    padding: 4px 8px 4px 0px;
+    margin: 4px 4px 4px 0px;
+
 }
 
 
+.formular input {
+    background-color: rgb(230, 222, 222);
+    border: solid 2px rgb(187, 16, 135);
+    border-radius: 0.5em;
+    font-family: serif;
+    font-size: 20px;
+    padding: 5px;
+
+}
 
 th {
 font-size: 35px;

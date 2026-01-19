@@ -10,60 +10,92 @@ background-image: url("Bilder/FlorianStettler/BG1.jpg");
     /* kein Kacheln */
     background-attachment: fixed;
     /* optional: bleibt beim Scrollen stehen */
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    padding-left: 10px;
+        font-family: "Google Sans", sans-serif;
+        color: white;
 }
 
 
-
-
-div {
+div.welcome {
 
     color: white;
     font-size: 70px;
+    text-align: center;
+        padding-top: 10px;
+        margin: 20px;
 }
 
 div.title {
-
+margin-top: 35px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
     color: rgba(187, 16, 135);
-        font-size: 55px;
-        text-shadow: 2px 2px 2px rgb(190, 144, 177);
+    font-size: 55px;
+font-family: "Google Sans", sans-serif;
+text-shadow: 2px 2px 2px rgb(190, 144, 177);
 }
 
-.topic {
+table.hobbies {}
+
+table.hobbies tr td {
+    max-width: 600px;
     font-size: 40px;
+    border-style: none;
+        text-align: center;
+        ;
+    }
+    
+    table.hobbies td {
+    
+        padding: 10px;
 }
 
 ul.title {
 
     color: rgba(187, 16, 135);
     font-size: 55px;
+    font-family: "Google Sans", sans-serif;
     text-shadow: 2px 2px 2px rgb(224, 210, 220);
     text-align: center;
     list-style-type: none;
+    margin: 10px;
+    }
+    
+    li.img {
+        margin-top: 20px;
 }
 
 p {
 
     color: white;
     font-size: 25px;
+    font-family: "Google Sans", sans-serif;
     margin: auto;
 }
 
 p.welcome {
     font-size: 20px;
+    font-family: "Google Sans", sans-serif;
+    }
+    
+    p.inline {
+        borde: in;
 }
 
 
 pre {
 
-    color: white;
+    color: rgb(248, 244, 19);
     font-size: 25px;
+    font-family: "Google Sans", sans-serif;
     margin: auto;
 }
 
-table {
+table.lebenslauf {
     color: white;
     font-size: 25px;
+    font-family: "Google Sans", sans-serif;
     margin: auto;
 
 }
@@ -73,6 +105,7 @@ form {
 
     color: white;
     font-size: 25px;
+    font-family: "Google Sans", sans-serif;
 }
 
 textarea.TextFeld {
@@ -89,6 +122,7 @@ div.formular {
 
     display: inline-block;
         font-size: 30px;
+        font-family: "Google Sans", sans-serif;
         padding: 10px;
 }
 
@@ -139,20 +173,18 @@ td.time {
     border-color: white;
 }
 
-/*td.job {
-    color: rgba(187, 16, 135);
-    text-shadow: 1px 1px 1px rgb(190, 144, 177);
-    border-color: white;
+table.florian td {
+    border-style: none;
+    font-family: "Google Sans", sans-serif;
+    color: white;
+    font-size: 25px;
+    font-family: "Google Sans", sans-serif;
 }
 
-th.deko {
-    color: rgba(187, 16, 135);
-    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+table.florian tr td:first-child {
+    padding-right: 20px;
+    font-weight: bold;
 }
-
-*/
-
-
 
         
 .topic {
@@ -189,7 +221,18 @@ a.house {
 
 
 
+/*td.job {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+    border-color: white;
+}
 
+th.deko {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+}
+
+*/
 
 
 

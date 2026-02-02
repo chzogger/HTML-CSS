@@ -38,18 +38,8 @@ text-shadow: 2px 2px 2px rgb(190, 144, 177);
 
 
 
-table.hobbies tr td {
-    max-width: 600px;
-    font-size: 40px;
-    border-style: none;
-        text-align: center;
-        ;
-    }
-    
-    table.hobbies td {
-    
-        padding: 10px;
-}
+
+
 
 ul.title {
 
@@ -90,11 +80,38 @@ pre {
     margin: auto;
 }
 
+th {
+    font-size: 35px;
+    border-style: groove;
+    border-width: medium;
+    border-color: white;
+    margin: auto;
+}
+
+td {
+    padding-top: 10px;
+    border-style: dotted;
+    border-width: thin;
+}
+
+table.hobbies {
+    border-style: none;
+}
+
+table.hobbies th,
+table.hobbies td {
+    max-width: 600px;
+    font-size: 40px;
+    border-style: none;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
 table.lebenslauf {
     color: white;
     font-size: 25px;
     font-family: "Google Sans", sans-serif;
     margin: auto;
+    
 
 }
 
@@ -151,19 +168,6 @@ div.formular {
 
 }
 
-th {
-font-size: 35px;
-border-style: groove;
-    border-width: medium;
-    border-color: white;
-    margin: auto;
-}
-
-td {
-    padding-top: 10px;
-    border-style: dotted;
-    border-width: thin;
-}
 
 td.time {
     color: rgba(187, 16, 135);
@@ -184,6 +188,12 @@ table.florian tr td:first-child {
     font-weight: bold;
 }
 
+table.lebenslauf {
+    background-image: radial-gradient(rgba(36, 11, 11, 0.7)), url(Bilder/FlorianStettler/BG1.jpg);
+    background-size: cover;
+
+
+}
         
 .topic {
 
@@ -212,6 +222,19 @@ a.house {
 }
 
 
+p.news {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px 15%;
+    color: blanchedalmond;
+
+}
+
+h1.news {
+    padding-top: 40px;
+    text-align: center;
+    color: rgb(58, 197, 197);
+}
 
 
 

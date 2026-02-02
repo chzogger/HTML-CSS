@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Autogarage Muster - Service, Reparaturen, Reifenwechsel, Diagnostik, Terminbuchung" />
+  <title>Autogarage Muster | Service • Reparatur • Reifen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Skip link -->
+  <a class="skip" href="#main">Zum Inhalt springen</a>
+
+  <!-- Cookie Banner -->
+  <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie Hinweis">
+    <div class="cookie__inner">
+      <div>
+        <strong>Cookies & Datenschutz</strong>
+        <p>Wir nutzen nur funktionale Cookies für z.B. Dark-Mode, gespeicherte Formulare und Favoriten.</p>
+      </div>
+      <div class="cookie__actions">
+        <button class="btn btn--ghost" id="cookieDecline">Ablehnen</button>
+        <button class="btn" id="cookieAccept">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__bar">
+      <a class="brand" href="#top" aria-label="Autogarage Muster">
+        <span class="brand__mark" aria-hidden="true">⚙️</span>
+        <span class="brand__text">
+          <span class="brand__name">Autogarage Muster</span>
+          <span class="brand__tag">Service • Reparatur • Diagnose</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr">Menü</span>
+          <span class="burger" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#calculator">Preisrechner</a></li>
+          <li><a href="#booking">Termin</a></li>
+          <li><a href="#reviews">Bewertungen</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="chip" id="themeToggle" aria-label="Dark Mode umschalten">
+          🌙 <span class="chip__text">Dark</span>
+        </button>
+        <a class="btn btn--small" href="#booking">Jetzt Termin</a>
+      </div>
+    </div>
+
+    <div class="container header__info">
+      <div class="pill" id="openStatus" aria-live="polite">⏳ Öffnungszeiten werden geprüft …</div>
+      <div class="pill">📍 Musterstrasse 12, 8000 Zürich</div>
+      <div class="pill">☎️ <a href="tel:+41441234567">+41 44 123 45 67</a></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1>Alles fürs Auto. Schnell, sauber, fair.</h1>
+          <p>
+            Von Inspektion über Bremsen bis Diagnose: Wir kombinieren Handwerk, moderne Tools und transparente Preise.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#services">Services ansehen</a>
+            <button class="btn btn--ghost" id="quickQuoteBtn">Schnell-Offerte</button>
+          </div>
+
+          <div class="hero__stats" aria-label="Kennzahlen">
+            <div class="stat">
+              <div class="stat__num" id="statYears">12+</div>
+              <div class="stat__label">Jahre Erfahrung</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" id="statCars">8’500+</div>
+              <div class="stat__label">Fahrzeuge betreut</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" id="statRating">4.8/5</div>
+              <div class="stat__label">Kundenzufriedenheit</div>
+            </div>
+          </div>
+
+          <div class="notice" id="savedNotice" hidden>
+            ✅ Deine Eingaben wurden gespeichert (LocalStorage).
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <div class="card card--accent">
+            <h2>Heute frei?</h2>
+            <p>Buche in 30 Sekunden einen Termin oder frage eine Offerte an.</p>
+
+            <form id="miniBooking" class="form">
+              <label class="field">
+                <span>Service</span>
+                <select id="miniService" required>
+                  <option value="" selected disabled>Bitte wählen…</option>
+                  <option value="Inspektion">Inspektion</option>
+                  <option value="Ölwechsel">Ölwechsel</option>
+                  <option value="Bremsen">Bremsen</option>
+                  <option value="Reifen">Reifenwechsel</option>
+                  <option value="Diagnose">Diagnose</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Wunschtermin</span>
+                <input id="miniDate" type="date" required />
+              </label>
+
+              <label class="field">
+                <span>Telefon / E-Mail</span>
+                <input id="miniContact" type="text" placeholder="z.B. +41… / name@mail.ch" required />
+              </label>
+
+              <button class="btn btn--full" type="submit">Anfragen</button>
+              <p class="muted">* Demo-Formular. Es wird nichts gesendet.</p>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Highlights</h3>
+            <ul class="checklist">
+              <li>✅ Transparente Pauschalen & Kostenvoranschläge</li>
+              <li>✅ Express-Service (nach Verfügbarkeit)</li>
+              <li>✅ Digitale Fahrzeugakte (Demo)</li>
+              <li>✅ Erinnerungen für Service & Reifenwechsel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Services</h2>
+            <p class="muted">Suche, filtere und markiere Favoriten. (Bleibt gespeichert.)</p>
+          </div>
+
+          <div class="toolbar">
+            <div class="toolbar__group">
+              <label class="field field--inline">
+                <span class="sr">Suche</span>
+                <input id="serviceSearch" type="search" placeholder="Service suchen… (z.B. Öl, Bremse)" />
+              </label>
+
+              <label class="field field--inline">
+                <span class="sr">Kategorie</span>
+                <select id="serviceCategory">
+                  <option value="all">Alle Kategorien</option>
+                  <option value="Wartung">Wartung</option>
+                  <option value="Sicherheit">Sicherheit</option>
+                  <option value="Reifen">Reifen</option>
+                  <option value="Elektronik">Elektronik</option>
+                  <option value="Komfort">Komfort</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="toolbar__group">
+              <button class="chip" id="showFavorites">⭐ Favoriten</button>
+              <button class="chip" id="resetFilters">↩︎ Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid" id="servicesGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="section section--alt" id="calculator">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Preisrechner (Demo)</h2>
+            <p class="muted">Schätze Kosten für typische Arbeiten. (Unverbindlich.)</p>
+          </div>
+          <div class="pill" id="calcHint">💡 Tipp: Wähle mehrere Posten</div>
+        </div>
+
+        <div class="calc">
+          <form id="calcForm" class="card form">
+            <div class="form__grid">
+              <label class="field">
+                <span>Fahrzeugklasse</span>
+                <select id="carClass">
+                  <option value="small">Kleinwagen</option>
+                  <option value="mid" selected>Mittelklasse</option>
+                  <option value="suv">SUV / Van</option>
+                  <option value="lux">Premium</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Motor</span>
+                <select id="engineType">
+                  <option value="petrol" selected>Benzin</option>
+                  <option value="diesel">Diesel</option>
+                  <option value="hybrid">Hybrid</option>
+                  <option value="ev">Elektro</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Dringlichkeit</span>
+                <select id="urgency">
+                  <option value="normal" selected>Normal (2–5 Tage)</option>
+                  <option value="fast">Express (24–48h)</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Rabattcode (optional)</span>
+                <input id="discountCode" placeholder="z.B. MUSTER10" />
+              </label>
+            </div>
+
+            <fieldset class="fieldset">
+              <legend>Posten</legend>
+              <div class="checks" id="calcItems"></div>
+            </fieldset>
+
+            <div class="form__actions">
+              <button class="btn" type="submit">Berechnen</button>
+              <button class="btn btn--ghost" type="button" id="calcClear">Leeren</button>
+            </div>
+          </form>
+
+          <div class="card calc__result">
+            <h3>Resultat</h3>
+            <div class="result__big" id="calcTotal">CHF 0.–</div>
+            <div class="result__meta" id="calcMeta">Wähle Posten und klicke Berechnen.</div>
+            <hr class="sep" />
+            <div class="result__list" id="calcBreakdown"></div>
+
+            <div class="result__actions">
+              <button class="btn btn--full" id="calcToBooking">Mit Resultat Termin buchen</button>
+            </div>
+            <p class="muted">Hinweis: Dies ist ein Demo-Rechner. Endpreis kann abweichen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section" id="booking">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Termin buchen (Demo)</h2>
+            <p class="muted">Mit Live-Validierung + Zusammenfassung. Eingaben werden gespeichert.</p>
+          </div>
+          <div class="pill">⏱️ Dauer je nach Service 30–180 Min.</div>
+        </div>
+
+        <div class="booking">
+          <form id="bookingForm" class="card form">
+            <div class="form__grid">
+              <label class="field">
+                <span>Vorname</span>
+                <input id="firstName" autocomplete="given-name" required />
+                <small class="error" data-for="firstName"></small>
+              </label>
+
+              <label class="field">
+                <span>Nachname</span>
+                <input id="lastName" autocomplete="family-name" required />
+                <small class="error" data-for="lastName"></small>
+              </label>
+
+              <label class="field">
+                <span>E-Mail</span>
+                <input id="email" type="email" autocomplete="email" required />
+                <small class="error" data-for="email"></small>
+              </label>
+
+              <label class="field">
+                <span>Telefon</span>
+                <input id="phone" type="tel" autocomplete="tel" placeholder="+41 …" required />
+                <small class="error" data-for="phone"></small>
+              </label>
+
+              <label class="field">
+                <span>Fahrzeug (Marke/Modell)</span>
+                <input id="carModel" placeholder="z.B. VW Golf" required />
+                <small class="error" data-for="carModel"></small>
+              </label>
+
+              <label class="field">
+                <span>Kennzeichen (optional)</span>
+                <input id="plate" placeholder="ZH 123456" />
+              </label>
+
+              <label class="field">
+                <span>Service</span>
+                <select id="service" required></select>
+                <small class="error" data-for="service"></small>
+              </label>
+
+              <label class="field">
+                <span>Datum</span>
+                <input id="date" type="date" required />
+                <small class="error" data-for="date"></small>
+              </label>
+
+              <label class="field">
+                <span>Uhrzeit</span>
+                <select id="time" required>
+                  <option value="" selected disabled>Bitte wählen…</option>
+                  <option>08:00</option><option>09:00</option><option>10:00</option>
+                  <option>11:00</option><option>13:00</option><option>14:00</option>
+                  <option>15:00</option><option>16:00</option>
+                </select>
+                <small class="error" data-for="time"></small>
+              </label>
+
+              <label class="field field--full">
+                <span>Notiz (optional)</span>
+                <textarea id="note" rows="4" placeholder="z.B. Geräusch beim Bremsen, Motorlampe an…"></textarea>
+              </label>
+
+              <label class="field field--full field--check">
+                <input id="consent" type="checkbox" required />
+                <span>Ich akzeptiere, dass dies nur eine Demo ist und keine echte Buchung auslöst.</span>
+                <small class="error" data-for="consent"></small>
+              </label>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn" type="submit">Termin anfragen</button>
+              <button class="btn btn--ghost" type="button" id="bookingReset">Zurücksetzen</button>
+            </div>
+
+            <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+          </form>
+
+          <aside class="card summary" aria-label="Zusammenfassung">
+            <h3>Zusammenfassung</h3>
+            <div class="summary__row"><span>Name</span><strong id="sumName">—</strong></div>
+            <div class="summary__row"><span>Kontakt</span><strong id="sumContact">—</strong></div>
+            <div class="summary__row"><span>Fahrzeug</span><strong id="sumCar">—</strong></div>
+            <div class="summary__row"><span>Service</span><strong id="sumService">—</strong></div>
+            <div class="summary__row"><span>Termin</span><strong id="sumDate">—</strong></div>
+            <hr class="sep" />
+            <div class="summary__row">
+              <span>Schätzung</span>
+              <strong id="sumPrice">—</strong>
+            </div>
+            <p class="muted">Die Schätzung kommt aus dem Preisrechner (falls genutzt).</p>
+
+            <div class="summary__actions">
+              <button class="chip" id="exportJson">⬇︎ Export (JSON)</button>
+              <button class="chip" id="copySummary">📋 Copy</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section section--alt" id="reviews">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Bewertungen</h2>
+            <p class="muted">Mit Sortierung + “Hilfreich”-Votes (gespeichert).</p>
+          </div>
+
+          <div class="toolbar">
+            <label class="field field--inline">
+              <span class="sr">Sortierung</span>
+              <select id="reviewSort">
+                <option value="top" selected>Top</option>
+                <option value="new">Neueste</option>
+                <option value="stars">Sterne</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="reviews" id="reviewsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Galerie</h2>
+            <p class="muted">Klick → Lightbox. (CSS + JS, ohne Bilder nötig.)</p>
+          </div>
+          <div class="pill">🖼️ Demo-Platzhalter</div>
+        </div>
+
+        <div class="gallery" id="galleryGrid" aria-label="Bildergalerie"></div>
+
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+          <button class="lightbox__close" id="lightboxClose" aria-label="Schliessen">✕</button>
+          <div class="lightbox__content" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+            <div class="lightbox__img" id="lightboxImg" aria-label="Vorschau"></div>
+            <div class="lightbox__caption" id="lightboxCap">—</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>FAQ</h2>
+            <p class="muted">Akkordeon mit Tastatur-Navigation.</p>
+          </div>
+        </div>
+
+        <div class="accordion" id="faqAccordion"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2>Kontakt</h2>
+            <p class="muted">Kontaktformular mit Validierung & “Simuliertem Versand”.</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div class="card">
+            <h3>Autogarage Muster</h3>
+            <p class="muted">
+              Musterstrasse 12<br />
+              8000 Zürich<br />
+              Mo–Fr: 08:00–18:00 • Sa: 09:00–13:00
+            </p>
+
+            <div class="contact__chips">
+              <a class="chip" href="tel:+41441234567">☎️ Anrufen</a>
+              <a class="chip" href="mailto:info@autogarage-muster.ch">✉️ Mail</a>
+              <button class="chip" id="shareBtn">🔗 Teilen</button>
+            </div>
+
+            <hr class="sep" />
+
+            <h4>Digitale Fahrzeugakte (Demo)</h4>
+            <p class="muted">Speichere Service-Historie lokal im Browser.</p>
+
+            <form id="historyForm" class="form">
+              <div class="form__grid">
+                <label class="field">
+                  <span>Datum</span>
+                  <input id="histDate" type="date" required />
+                </label>
+                <label class="field">
+                  <span>Eintrag</span>
+                  <input id="histEntry" placeholder="z.B. Ölwechsel + Filter" required />
+                </label>
+                <label class="field field--full">
+                  <span>Notiz</span>
+                  <textarea id="histNote" rows="3" placeholder="z.B. 5W-30, nächste Kontrolle in 12 Monaten"></textarea>
+                </label>
+              </div>
+              <div class="form__actions">
+                <button class="btn" type="submit">Eintrag speichern</button>
+                <button class="btn btn--ghost" type="button" id="historyClear">Historie löschen</button>
+              </div>
+            </form>
+
+            <div class="history" id="historyList" aria-live="polite"></div>
+          </div>
+
+          <form id="contactForm" class="card form">
+            <h3>Nachricht senden</h3>
+
+            <label class="field">
+              <span>Betreff</span>
+              <input id="cSubject" required placeholder="z.B. Offerte Reifenwechsel" />
+              <small class="error" data-for="cSubject"></small>
+            </label>
+
+            <label class="field">
+              <span>Dein Name</span>
+              <input id="cName" required />
+              <small class="error" data-for="cName"></small>
+            </label>
+
+            <label class="field">
+              <span>Deine E-Mail</span>
+              <input id="cEmail" type="email" required />
+              <small class="error" data-for="cEmail"></small>
+            </label>
+
+            <label class="field">
+              <span>Nachricht</span>
+              <textarea id="cMessage" rows="6" required placeholder="Schreib uns kurz, was du brauchst…"></textarea>
+              <small class="error" data-for="cMessage"></small>
+            </label>
+
+            <div class="form__actions">
+              <button class="btn" type="submit">Senden (Demo)</button>
+              <button class="btn btn--ghost" type="button" id="contactFill">Autofill</button>
+            </div>
+
+            <div class="meter" aria-label="Text Qualität">
+              <div class="meter__label">
+                <span>Nachrichten-Check</span>
+                <strong id="qualityLabel">—</strong>
+              </div>
+              <div class="meter__bar">
+                <div class="meter__fill" id="qualityFill" style="width:0%"></div>
+              </div>
+              <p class="muted">Länge + Vielfalt der Wörter (sehr grob).</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="brand brand--footer">
+            <span class="brand__mark" aria-hidden="true">⚙️</span>
+            <span class="brand__text">
+              <span class="brand__name">Autogarage Muster</span>
+              <span class="brand__tag">Transparenz. Qualität. Tempo.</span>
+            </span>
+          </div>
+          <p class="muted">
+            © <span id="year"></span> Autogarage Muster — Demo-Seite.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <a href="#services">Services</a>
+          <a href="#booking">Termin</a>
+          <a href="#contact">Kontakt</a>
+          <button class="linklike" id="privacyBtn">Datenschutz (Demo)</button>
+        </div>
+
+        <div class="footer__cta">
+          <button class="btn btn--ghost" id="clearStorage">🧹 Speicher löschen</button>
+          <a class="btn" href="#top">Nach oben</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="toTop" id="toTop" aria-label="Nach oben" hidden>↑</button>
+
+    <!-- Modal: Schnell-Offerte -->
+    <div class="modal" id="quoteModal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Schnell-Offerte">
+        <div class="modal__head">
+          <h3>Schnell-Offerte</h3>
+          <button class="iconBtn" data-close aria-label="Schliessen">✕</button>
+        </div>
+
+        <form id="quoteForm" class="form">
+          <div class="form__grid">
+            <label class="field">
+              <span>Problem / Wunsch</span>
+              <input id="qTopic" required placeholder="z.B. Motorlampe, Reifenwechsel…" />
+            </label>
+            <label class="field">
+              <span>Budget (optional)</span>
+              <input id="qBudget" type="number" min="0" step="10" placeholder="CHF" />
+            </label>
+            <label class="field field--full">
+              <span>Details</span>
+              <textarea id="qDetails" rows="4" placeholder="Kurz beschreiben…"></textarea>
+            </label>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn" type="submit">Offerte erstellen (Demo)</button>
+            <button class="btn btn--ghost" type="button" data-close>Abbrechen</button>
+          </div>
+
+          <div class="card mini" id="quoteResult" hidden>
+            <h4>Vorschlag</h4>
+            <p class="muted" id="quoteText">—</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal: Datenschutz -->
+    <div class="modal" id="privacyModal" aria-hidden="true">
+      <div class="modal__overlay" data-close></div>
+      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Datenschutz">
+        <div class="modal__head">
+          <h3>Datenschutz (Demo)</h3>
+          <button class="iconBtn" data-close aria-label="Schliessen">✕</button>
+        </div>
+        <div class="prose">
+          <p>
+            Diese Demo speichert einige Dinge lokal in deinem Browser (LocalStorage), z.B. Dark-Mode, Formulardaten,
+            Favoriten und “Hilfreich”-Votes. Es werden keine Daten an einen Server gesendet.
+          </p>
+          <p class="muted">In einer echten Seite würden hier rechtliche Texte stehen.</p>
+        </div>
+        <div class="form__actions">
+          <button class="btn" data-close>Verstanden</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // ---------------------------
+    // Data
+    // ---------------------------
+    const SERVICES = [
+      { id: "oil", title: "Ölwechsel", cat: "Wartung", mins: 45, price: 170, desc: "Öl + Filter + Sichtkontrolle.", tags: ["öl", "filter", "wartung"] },
+      { id: "inspection", title: "Inspektion", cat: "Wartung", mins: 120, price: 320, desc: "Herstellernahe Checks & Flüssigkeiten.", tags: ["service", "wartung", "check"] },
+      { id: "brakes", title: "Bremsen-Check", cat: "Sicherheit", mins: 60, price: 140, desc: "Beläge/Scheiben prüfen, Messwerte.", tags: ["bremse", "sicherheit"] },
+      { id: "brakeReplace", title: "Bremsen ersetzen", cat: "Sicherheit", mins: 180, price: 690, desc: "Beläge + Scheiben (Achse) ab.", tags: ["bremse", "scheiben"] },
+      { id: "tires", title: "Reifenwechsel", cat: "Reifen", mins: 40, price: 90, desc: "Räderwechsel + Drehmoment.", tags: ["reifen", "räder"] },
+      { id: "storage", title: "Reifen einlagern", cat: "Reifen", mins: 10, price: 65, desc: "Saisonlagerung im Hotel.", tags: ["reifen", "lager"] },
+      { id: "ac", title: "Klima-Service", cat: "Komfort", mins: 60, price: 160, desc: "Dichtheit, Kältemittel, Geruch.", tags: ["klima", "komfort"] },
+      { id: "diag", title: "Diagnose / OBD", cat: "Elektronik", mins: 60, price: 180, desc: "Fehlercodes auslesen + Bericht.", tags: ["diagnose", "obd", "elektronik"] },
+      { id: "battery", title: "Batterie-Test", cat: "Elektronik", mins: 20, price: 50, desc: "Startleistung & Ladezustand.", tags: ["batterie", "start"] },
+      { id: "lights", title: "Licht einstellen", cat: "Sicherheit", mins: 25, price: 65, desc: "Scheinwerfer prüfen & justieren.", tags: ["licht", "sicherheit"] },
+      { id: "wash", title: "Innen-/Aussenreinigung", cat: "Komfort", mins: 90, price: 190, desc: "Gründliche Pflege & Staubsaugen.", tags: ["reinigung", "pflege"] },
+    ];
+
+    const CALC_ITEMS = [
+      { id: "oil", label: "Ölwechsel", base: 170 },
+      { id: "filters", label: "Luft-/Pollenfilter", base: 85 },
+      { id: "brakes", label: "Bremsen-Check", base: 140 },
+      { id: "brakeParts", label: "Bremsen (Achse) ersetzen", base: 690 },
+      { id: "tires", label: "Reifenwechsel", base: 90 },
+      { id: "alignment", label: "Achsvermessung", base: 210 },
+      { id: "diag", label: "Diagnose/OBD", base: 180 },
+      { id: "ac", label: "Klima-Service", base: 160 },
+      { id: "battery", label: "Batterie (Test)", base: 50 },
+    ];
+
+    const REVIEWS = [
+      { id: "r1", name: "M. Keller", stars: 5, date: "2025-11-02", text: "Schnell Termin bekommen, saubere Arbeit, fairer Preis." },
+      { id: "r2", name: "A. Rossi", stars: 5, date: "2025-10-14", text: "Diagnose war präzise, Fehler direkt gefunden. Top Kommunikation." },
+      { id: "r3", name: "S. Meier", stars: 4, date: "2025-07-22", text: "Reifenwechsel ging zügig. Wartebereich angenehm." },
+      { id: "r4", name: "L. Novak", stars: 5, date: "2025-12-05", text: "Bremsen gemacht, alles transparent erklärt. Sehr professionell." },
+      { id: "r5", name: "N. Frei", stars: 4, date: "2025-09-01", text: "Gute Beratung. Kleine Verzögerung, aber fair gelöst." },
+    ];
+
+    const FAQ = [
+      { q: "Kann ich ohne Termin vorbeikommen?", a: "Ja, für kleine Checks. Für Reparaturen empfehlen wir einen Termin, damit du nicht warten musst." },
+      { q: "Welche Marken betreut ihr?", a: "Wir betreuen die meisten Marken. Für Spezialfälle (z.B. exotische Modelle) klären wir vorab kurz ab." },
+      { q: "Wie funktioniert der Preisrechner?", a: "Er schätzt anhand typischer Pauschalen. Endpreis hängt von Teilen, Zustand und Aufwand ab." },
+      { q: "Habt ihr Ersatzwagen?", a: "In dieser Demo ja 😉. In echt: oft nach Verfügbarkeit. Am besten beim Termin anfragen." },
+      { q: "Speichert die Seite Daten?", a: "Nur lokal im Browser (Dark-Mode, Favoriten, Formulare). Nichts wird gesendet." },
+    ];
+
+    // ---------------------------
+    // Helpers
+    // ---------------------------
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+    const fmtCHF = (n) => `CHF ${Math.round(n).toLocaleString("de-CH")}.-`;
+
+    const storage = {
+      get(key, fallback=null){
+        try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; }
+      },
+      set(key, val){
+        localStorage.setItem(key, JSON.stringify(val));
+      },
+      del(key){ localStorage.removeItem(key); }
+    };
+
+    // ---------------------------
+    // Theme
+    // ---------------------------
+    const themeToggle = $("#themeToggle");
+    const applyTheme = (mode) => {
+      document.documentElement.dataset.theme = mode;
+      storage.set("theme", mode);
+      themeToggle.querySelector(".chip__text").textContent = mode === "dark" ? "Light" : "Dark";
+      themeToggle.firstChild.textContent = mode === "dark" ? "☀️ " : "🌙 ";
+    };
+    const initTheme = () => applyTheme(storage.get("theme", "light"));
+
+    // ---------------------------
+    // Cookie banner
+    // ---------------------------
+    const cookieBanner = $("#cookieBanner");
+    const initCookie = () => {
+      const consent = storage.get("cookieConsent", null);
+      cookieBanner.hidden = consent !== null;
+    };
+    $("#cookieAccept").addEventListener("click", () => {
+      storage.set("cookieConsent", true);
+      cookieBanner.hidden = true;
+    });
+    $("#cookieDecline").addEventListener("click", () => {
+      storage.set("cookieConsent", false);
+      cookieBanner.hidden = true;
+    });
+
+    // ---------------------------
+    // Nav (mobile)
+    // ---------------------------
+    const navToggle = $("#navToggle");
+    const navMenu = $("#navMenu");
+    navToggle.addEventListener("click", () => {
+      const open = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!open));
+      navMenu.classList.toggle("nav__menu--open", !open);
+    });
+    $$("#navMenu a").forEach(a => a.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      navMenu.classList.remove("nav__menu--open");
+    }));
+
+    // ---------------------------
+    // Open status (based on local time)
+    // Mo–Fr 08:00–18:00, Sa 09:00–13:00, So closed
+    // ---------------------------
+    const openStatus = $("#openStatus");
+    const setOpenStatus = () => {
+      const now = new Date();
+      const day = now.getDay(); // 0 Sun
+      const minutes = now.getHours() * 60 + now.getMinutes();
+
+      let open = false;
+      let text = "Geschlossen";
+      let next = "";
+
+      const inRange = (fromH, fromM, toH, toM) => {
+        const from = fromH*60 + fromM;
+        const to = toH

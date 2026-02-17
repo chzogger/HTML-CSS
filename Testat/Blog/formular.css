@@ -14,13 +14,12 @@ form p {
 
 div.formular {
     display: inline-block;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Google Sans", sans-serif;
 }
 
-form label.newsletter {
-    padding-top: 10px;
-}
+
+
 
 textarea.TextFeld {
     display: block;
@@ -44,6 +43,8 @@ textarea.TextFeld {
 .formular input[type="checkbox"] {
     transform: scale(3.0);
     margin: 10px;
+    padding-bottom: 4%;
+    
 
 }
 
@@ -51,6 +52,7 @@ textarea.TextFeld {
 
     font-size: 25px;
     background-color: rgba(187, 16, 135);
+    padding-bottom: 4%;
 
 }
 

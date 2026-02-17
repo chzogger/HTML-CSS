@@ -1,0 +1,67 @@
+form {
+    padding-left: 10px;
+    color: white;
+    font-size: 25px;
+    font-family: "Google Sans", sans-serif;
+}
+
+form p {
+
+    padding-left: 0px;
+}
+
+
+
+div.formular {
+    display: inline-block;
+    font-size: 30px;
+    font-family: "Google Sans", sans-serif;
+}
+
+form label.newsletter {
+    padding-top: 10px;
+}
+
+textarea.TextFeld {
+    display: block;
+    width: 800px;
+    height: 500px;
+    margin-top: 10px;
+    font-size: 25px;
+    border: solid 2px rgb(187, 16, 135);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.formular label {
+    padding: 8px 8px 4px 0px;
+    margin: 4px 4px 4px 0px;
+}
+
+
+
+
+.formular input[type="checkbox"] {
+    transform: scale(3.0);
+    margin: 10px;
+
+}
+
+.formular input[type="submit"] {
+
+    font-size: 25px;
+    background-color: rgba(187, 16, 135);
+
+}
+
+
+
+.formular input {
+    background-color: rgb(230, 222, 222);
+    border: solid 2px rgb(187, 16, 135);
+    border-radius: 0.5em;
+    font-family: serif;
+    font-size: 20px;
+    padding: 5px;
+
+}

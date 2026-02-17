@@ -1,0 +1,70 @@
+ul.title {
+
+    color: rgba(187, 16, 135);
+    font-size: 55px;
+    font-family: "Google Sans", sans-serif;
+    text-shadow: 2px 2px 2px rgb(224, 210, 220);
+    text-align: center;
+    list-style-type: none;
+    margin: 10px;
+}
+
+li.img {
+    margin-top: 20px;
+}
+
+th {
+    font-size: 35px;
+    border-style: groove;
+    border-width: medium;
+    border-color: white;
+    margin: auto;
+}
+
+td {
+    padding-top: 10px;
+    border-style: dotted;
+    border-width: thin;
+}
+
+table.hobbies {
+    border-style: none;
+}
+
+table.hobbies th,
+table.hobbies td {
+    max-width: 600px;
+    font-size: 40px;
+    border-style: none;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+
+table.lebenslauf {
+    color: white;
+    font-size: 25px;
+    font-family: "Google Sans", sans-serif;
+    margin: auto;
+    background-image: radial-gradient(rgba(36, 11, 11, 0.7)), url(Bilder/FlorianStettler/BG1.jpg);
+    background-size: cover;
+}
+
+td.time {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+    border-color: white;
+}
+
+table.florian td {
+    border-style: none;
+    font-family: "Google Sans", sans-serif;
+    color: white;
+    font-size: 25px;
+    font-family: "Google Sans", sans-serif;
+    padding-left: 10px;
+}
+
+table.florian tr td:first-child {
+    padding-right: 20px;
+    font-weight: bold;
+}

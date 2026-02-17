@@ -1,0 +1,178 @@
+body {
+
+    background-image: url("Bilder/FlorianStettler/BG1.jpg");
+    background-size: cover;
+    /* Bild füllt den Bildschirm */
+    background-position: center;
+    /* Bild bleibt zentriert */
+    background-repeat: no-repeat;
+    /* kein Kacheln */
+    background-attachment: fixed;
+    /* optional: bleibt beim Scrollen stehen */
+    padding-left: 10px;
+    font-family: "Google Sans", sans-serif;
+    color: white;
+
+    padding-bottom: 2.5%;
+}
+
+h1.news {
+    padding-top: 40px;
+    text-align: center;
+    color: rgb(58, 197, 197);
+
+}
+
+/* Überschriften, Untertitel */
+div.welcome {
+
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 10px;
+    margin: 20px;
+}
+
+div.title {
+    margin-top: 35px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(187, 16, 135);
+    font-size: 55px;
+    font-family: "Google Sans", sans-serif;
+    text-shadow: 2px 2px 2px rgb(190, 144, 177);
+    padding-left: 10px;
+
+}
+
+div.detail {
+
+    width: 1200px;
+    margin: auto;
+}
+
+div.tamos {
+
+
+    height: 350px;
+    width: 600px;
+    margin: auto;
+
+    background-image: linear-gradient(135deg, rgba(26, 24, 94, 0.25) 60%, rgba(66, 14, 14, 0.25)40%), url(Bilder/FlorianStettler/Webbild_TAMOS-AG-01.png);
+    background-size: cover;
+
+
+
+}
+
+p {
+
+    color: white;
+    font-size: 25px;
+    font-family: "Google Sans", sans-serif;
+    margin: auto;
+    padding-top: 4px;
+    padding-left: 10px;
+}
+
+p.welcome {
+    font-size: 20px;
+    font-family: "Google Sans", sans-serif;
+}
+
+p.news {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px 15%;
+    color: blanchedalmond;
+
+}
+
+p.detail {
+
+    color: rgba(255, 255, 255, 0.8);
+    font: bold;
+    padding-top: 100px;
+    text-align: center;
+
+
+}
+
+
+
+
+
+/*Impressum*/
+.topic {
+
+    font-size: 40px;
+}
+
+
+/*Zitat*/
+blockquote {
+
+    border-left: 5px solid rgb(82, 16, 16);
+    padding-left: 1rem;
+    margin: 3rem 0;
+    font-style: italic;
+    color: blanchedalmond
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Hover Effekte*/
+a:hover {
+    color: white;
+    cursor: grab
+}
+
+/*macht den Button lebendig */
+.news a:hover {
+    background-color: rgba(85, 85, 85, 0);
+
+    color: white;
+    font: bold;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(187, 16, 135)
+}
+
+a.house {
+
+    font-size: 65px;
+    text-align: right;
+
+
+}
+
+
+
+
+.news a {
+    display: inline-block;
+    background-color: grey;
+    color: rgb(134, 33, 33);
+    text-decoration: none;
+
+
+    padding: 3px 10px;
+
+    border-radius: 10px;
+
+    font-family: "Google Sans", sans-serif;
+    font-weight: bold;
+
+    /* Sanfter Übergang für Farbe UND Hintergrund */
+    transition: color 0.3s ease;
+}

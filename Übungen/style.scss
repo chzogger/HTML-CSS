@@ -1,0 +1,36 @@
+@use 'variable';
+@use 'sass:math';
+
+@mixin theme($color: blue, $fontsize: 20px) {
+    background-color: $color;
+    font-size: $fontsize
+}
+
+div {
+    margin: 10px;
+    padding: 0.5em;
+    @theme(variable.$fontsize);
+}
+
+.inhalt {
+    background-color: variable.$backcol;
+}
+
+.inhalt2 {
+    @include theme;
+}
+
+.inhalt3 {
+    @include theme(red, 30px);
+}
+
+.inhalt4 {
+    @include theme($fontsize: math.div(10px, 2)*5);
+}
+
+body {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+
+}

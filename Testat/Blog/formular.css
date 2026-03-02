@@ -1,69 +1,110 @@
 form {
-    padding-left: 10px;
+    padding: 20px;
     color: white;
     font-size: 25px;
     font-family: "Google Sans", sans-serif;
-}
-
-form p {
-
-    padding-left: 0px;
-}
-
-
-
-div.formular {
-    display: inline-block;
-    font-size: 25px;
-    font-family: "Google Sans", sans-serif;
-}
-
-
-
-
-textarea.TextFeld {
-    display: block;
-    width: 800px;
-    height: 500px;
-    margin-top: 10px;
-    font-size: 25px;
-    border: solid 2px rgb(187, 16, 135);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-.formular label {
-    padding: 8px 8px 4px 0px;
-    margin: 4px 4px 4px 0px;
-}
-
-
-
-
-.formular input[type="checkbox"] {
-    transform: scale(3.0);
-    margin: 10px;
-    padding-bottom: 4%;
+    max-width: 800px;
+        margin: auto;
     
-
+        background-color: rgba(44, 44, 44, 0.5);
+        border-radius: 15px;
 }
 
-.formular input[type="submit"] {
-
-    font-size: 25px;
-    background-color: rgba(187, 16, 135);
-    padding-bottom: 4%;
-
+p.feedback {
+    text-align: center;
+    padding-bottom: 20px;
 }
 
+form>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
 
+.formular {
+    flex: 0 0 calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+}
 
+/* Newsletter-Box volle Breite
+flex: <grow><shrink><basis>; */
+.formular.newsletter-box {
+    flex: 0 0 100%;
+}
+
+/* Message (Textarea) volle Breite */
+.formular:has(textarea) {
+    flex: 0 0 100%;
+}
+
+/* Submit volle Breite */
+.formular:has(input[type="submit"]) {
+    flex: 0 0 100%;
+    
+}
+
+.formular input,
+.formular textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Inputs Optik */
 .formular input {
     background-color: rgb(230, 222, 222);
     border: solid 2px rgb(187, 16, 135);
     border-radius: 0.5em;
-    font-family: serif;
-    font-size: 20px;
-    padding: 5px;
+        font-family: "Google Sans", sans-serif;
+        font-size: 18px;
+        padding: 5px;
+}
 
+/* ✅ Newsletter-Layout: Text links, Checkbox rechts, kein Umbruch */
+.newsletter {
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    white-space: nowrap;
+    /* verhindert Umbruch */
+}
+
+/* ✅ Checkbox ganz nach rechts */
+.newsletter input[type="checkbox"] {
+    margin-left: auto;
+    transform: scale(1.5);
+}
+
+/* Textarea */
+textarea.TextFeld {
+    min-height: 300px;
+    font-size: 20px;
+    font-family: "Google Sans", sans-serif;
+    border: solid 2px rgb(187, 16, 135);
+    margin-top: 10px;
+    resize: vertical;
+}
+/* Submit Button */
+.formular input[type="submit"] {
+    width: 80%;
+        display: block;
+        /* wichtig */
+        margin: 0 auto;
+        /* zentriert horizontal */
+    font-size: 25px;
+    background-color: rgb(187, 16, 135);
+        color: white;
+        width: 80%;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+}
+
+.formular input[type="submit"]:hover {
+    filter: brightness(0.9);
 }

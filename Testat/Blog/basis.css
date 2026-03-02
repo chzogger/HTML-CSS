@@ -38,7 +38,7 @@ div.title {
     margin-right: 50px;
     display: flex;
     justify-content: space-between;
-    color: rgba(187, 16, 135);
+    color: rgb(187, 16, 135);
     font-size: 55px;
     font-family: "Google Sans", sans-serif;
     text-shadow: 2px 2px 2px rgb(190, 144, 177);
@@ -66,6 +66,55 @@ div.tamos {
 
 }
 
+/* Container: alle News-Beiträge als Grid */
+div.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Jede News-Karte (die inneren divs) */
+div.news>div {
+    background-color: rgba(44, 44, 44, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+
+    /* sorgt für "Karten"-Look */
+    border: 2px solid rgba(187, 16, 135, 0.4);
+}
+
+/* Überschrift in der Karte */
+div.news>div h1.news {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: rgb(187, 16, 135)
+}
+
+/* Text in der Karte */
+div.news>div p.news {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    color: white;
+    line-height: 1.4;
+}
+
+
+
+div.news>div a:hover {
+    text-decoration: underline;
+}
+
+/* Bilder in News */
+div.news img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
 p {
 
     color: white;
@@ -162,12 +211,12 @@ a.house {
 .news a {
     display: inline-block;
     background-color: grey;
-    color: rgb(134, 33, 33);
+    color: rgb(187, 16, 135);
     text-decoration: none;
 
 
     padding: 3px 10px;
-
+    margin-top: 8px;
     border-radius: 10px;
 
     font-family: "Google Sans", sans-serif;

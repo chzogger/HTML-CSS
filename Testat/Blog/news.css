@@ -1,0 +1,108 @@
+/* Container: alle News-Beiträge als Grid */
+div.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Jede News-Karte (die inneren divs) */
+div.news>div {
+    background-color: rgba(44, 44, 44, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+
+    /* sorgt für "Karten"-Look */
+    border: 2px solid rgba(187, 16, 135, 0.4);
+    box-shadow: -1px 2px white;
+}
+
+/* Überschrift in der Karte */
+div.news>div h1.news-title {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: rgb(204, 89, 169);
+
+}
+
+/* Text in der Karte */
+div.news>div p.news-text {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: white;
+    line-height: 1.4;
+}
+
+
+
+div.news>div a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Bilder in News */
+div.news img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+p.news-text {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px 15%;
+    color: blanchedalmond;
+
+
+}
+
+.news-card {
+    background-color: rgba(44, 44, 44, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid transparent;
+
+    transition: all 0.6s ease;
+}
+
+/*macht den Button lebendig */
+.news a:hover {
+    background-color: rgba(85, 85, 85, 0);
+
+    color: white;
+    font: bold;
+
+}
+
+.news-card:focus {
+    outline: none;
+    /* Standard-Outline entfernen */
+
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(187, 16, 135, 0.5);
+
+    transform: translateY(-10px);
+}
+
+.news a {
+    display: inline-block;
+    background-color: grey;
+    color: rgb(187, 16, 135);
+    text-decoration: none;
+
+
+    padding: 3px 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+
+    font-family: "Google Sans", sans-serif;
+    font-weight: bold;
+
+    /* Sanfter Übergang für Farbe UND Hintergrund */
+    transition: color 0.3s ease;
+}

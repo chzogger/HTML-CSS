@@ -13,16 +13,19 @@ li.img {
     margin-top: 20px;
 }
 
-th {
-    font-size: 35px;
+table.lebenslauf th {
+    font-size: 30px;
     border-style: groove;
     border-width: medium;
     border-color: white;
     margin: auto;
+    padding: 8px;
+        color: hsla(176, 85%, 47%, 0.993);
+        text-shadow: 2px 2px rgb(199, 18, 42);
 }
 
 td {
-    padding-top: 10px;
+    padding: 8px;
     border-style: dotted;
     border-width: thin;
 }
@@ -42,11 +45,17 @@ table.hobbies td {
 
 table.lebenslauf {
     color: white;
+    
     font-size: 25px;
     font-family: "Google Sans", sans-serif;
     margin: auto;
-    background-image: radial-gradient(rgba(36, 11, 11, 0.7)), url(Bilder/FlorianStettler/BG1.jpg);
+    margin-top: 0.5em;
+        background-image: radial-gradient(rgba(32, 90, 124, 0.185)), url(Bilder/FlorianStettler/BG1.jpg);
     background-size: cover;
+/*11,
+        27,
+        36,
+        0.7*/
 }
 
 td.time {

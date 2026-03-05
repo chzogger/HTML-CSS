@@ -85,6 +85,17 @@ p.detail {
 
 }
 
+.lia {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.lia img {
+    height: 400px;
+    max-width: 100%;
+    border-radius: 8px;
+}
 
 
 
@@ -135,6 +146,10 @@ a.house {
 
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 

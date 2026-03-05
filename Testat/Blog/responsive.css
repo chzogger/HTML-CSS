@@ -1,0 +1,138 @@
+/* ===== responsive.css ===== */
+
+/* 0) Basis-Fallback: läuft in jedem Browser */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Große fixe Breiten entschärfen */
+div.detail {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Background: fixed kann auf Mobile ruckeln -> fallback */
+@media (max-width: 800px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* 1) Navigation / Title Liste: auf kleinen Screens untereinander */
+@media (max-width: 700px) {
+    ul.title {
+        font-size: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    li.img {
+        max-width: 260px;
+    }
+
+    div.welcome {
+        font-size: 42px;
+        margin: 12px;
+    }
+
+    div.title {
+        font-size: 34px;
+        margin-right: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    a.house {
+        font-size: 42px;
+    }
+}
+
+/* 2) Lia-Bilder: nebeneinander auf groß, untereinander auf klein */
+@media (max-width: 800px) {
+    .lia {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lia img {
+        height: auto;
+        max-height: 320px;
+        width: 100%;
+    }
+}
+
+/* 3) Tabellen: graceful degradation
+   - Alte Browser: Tabelle darf horizontal scrollen statt Layout zu sprengen */
+table {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Hobbies-Bilder: gleiche Optik, aber responsive Höhe */
+td img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 800px) {
+    td img {
+        height: 240px;
+        /* kleiner auf Mobile */
+    }
+}
+
+/* 4) Formular: fallback (Flex -> alles 100% auf klein) */
+@media (max-width: 650px) {
+    .formular {
+        flex: 0 0 100%;
+    }
+
+    .newsletter {
+        white-space: normal;
+        flex-wrap: wrap;
+    }
+}
+
+/* ===== Moderne Browser: Verbesserungen ===== */
+
+/* 5) Moderne Typografie (wenn clamp unterstützt) */
+@supports (font-size: clamp(16px, 2vw, 24px)) {
+    p {
+        font-size: clamp(16px, 2.2vw, 22px);
+    }
+}
+
+/* 6) News: modernes Grid nur wenn Grid unterstützt wird */
+@supports (display: grid) {
+    div.news {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* 7) :has()-Regeln vermeiden (Graceful Degradation)
+   Fallback-Klassen, falls du sie im HTML setzt
+*/
+.formular.full,
+.formular.newsletter-box {
+    flex: 0 0 100%;
+}

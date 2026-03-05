@@ -4,7 +4,7 @@ div.news {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 30px auto;
     padding: 20px;
 }
@@ -25,7 +25,7 @@ div.news>div h1.news-title {
     margin: 0 0 10px 0;
     font-size: 22px;
     color: rgb(204, 89, 169);
-
+    
 }
 
 /* Text in der Karte */
@@ -55,7 +55,7 @@ div.news img {
 p.news-text {
     box-sizing: border-box;
     text-align: center;
-    padding: 0px 15%;
+    padding: 0px 15% 20px;
     color: blanchedalmond;
 
 
@@ -102,6 +102,7 @@ p.news-text {
 
     font-family: "Google Sans", sans-serif;
     font-weight: bold;
+    font-size: 120%;
 
     /* Sanfter Übergang für Farbe UND Hintergrund */
     transition: color 0.3s ease;

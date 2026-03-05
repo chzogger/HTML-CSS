@@ -1,6 +1,6 @@
 body {
 
-    background-image: url("Bilder/FlorianStettler/BG1.jpg");
+    background-image: url("../Bilder/FlorianStettler/BG1.jpg");
     background-size: cover;
     /* Bild füllt den Bildschirm */
     background-position: center;
@@ -52,7 +52,7 @@ div.tamos {
     width: 600px;
     margin: auto;
 
-    background-image: linear-gradient(135deg, rgba(26, 24, 94, 0.25) 60%, rgba(66, 14, 14, 0.25)40%), url(Bilder/FlorianStettler/Webbild_TAMOS-AG-01.png);
+    background-image: linear-gradient(135deg, rgba(26, 24, 94, 0.25) 60%, rgba(66, 14, 14, 0.25)40%), url(../Bilder/FlorianStettler/Webbild_TAMOS-AG-01.png);
     background-size: cover;
 
 
@@ -150,6 +150,3 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-
-

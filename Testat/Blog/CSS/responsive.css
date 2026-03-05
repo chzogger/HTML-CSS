@@ -27,6 +27,7 @@ div.detail {
 }
 
 /* 1) Navigation / Title Liste: auf kleinen Screens untereinander */
+
 @media (max-width: 700px) {
     ul.title {
         font-size: 28px;
@@ -71,6 +72,19 @@ div.detail {
     }
 }
 
+@media (max-width: 700px) {
+    .lebenslauf {
+        grid-template-columns: 1fr;
+    }
+
+    .Spalte1,
+    .Spalte2,
+    .Spalte3 {
+        display: none;
+        font-size: 1em;
+    }
+
+}
 /* 3) Tabellen: graceful degradation
    - Alte Browser: Tabelle darf horizontal scrollen statt Layout zu sprengen */
 table {

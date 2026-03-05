@@ -16,22 +16,7 @@ li.img {
     display: flex;
 }
 
-table.lebenslauf th {
-    font-size: 30px;
-    border-style: groove;
-    border-width: medium;
-    border-color: white;
-    margin: auto;
-    padding: 8px;
-    color: hsla(176, 85%, 47%, 0.993);
-        text-shadow: 2px 2px rgb(199, 18, 42);
-}
 
-.lebenslauf td {
-    padding: 8px;
-    border-style: dotted;
-    border-width: thin;
-}
 
 table.hobbies {
     border-style: none;
@@ -58,20 +43,7 @@ table.hobbies th {
         padding-right: 0.5em;
 }
 
-table.lebenslauf {
-    color: white;
 
-    font-size: 25px;
-    font-family: "Google Sans", sans-serif;
-    margin: auto;
-    margin-top: 0.5em;
-    background-image: radial-gradient(rgba(32, 90, 124, 0.185)), url(Bilder/FlorianStettler/BG1.jpg);
-    background-size: cover;
-    /*11,
-        27,
-        36,
-        0.7*/
-}
 
 td.time {
     color: rgba(187, 16, 135);
@@ -91,4 +63,39 @@ table.florian td {
 table.florian tr td:first-child {
     padding-right: 20px;
     font-weight: bold;
+}
+.lebenslauf {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Zeitpunkt | Tätigkeit | Arbeitsort */
+    gap: 0.5em 10px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.Spalte1,
+.Spalte2,
+.Spalte3 {
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(187, 16, 135);
+    text-shadow: 1px 1px 3px rgb(243, 243, 243);
+
+    border-bottom: 2px solid rgb(187, 16, 135);
+    padding-bottom: 5px;
+}
+
+.Zeitpunkt {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.Tätigkeit {
+    color: white;
+    font-size: 1.7em;
+}
+
+.Arbeitsort {
+    color: white;
+    font-size: 1.4em;
 }

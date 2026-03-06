@@ -1,0 +1,19 @@
+div.title {
+  color: rgb(187, 16, 135);
+  margin-top: 35px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 55px;
+  font-family: "Google Sans", sans-serif;
+  text-shadow: 2px 2px 2px rgb(190, 144, 177);
+  padding-left: 10px;
+}
+
+/*
+
+
+
+*/
+
+/*# sourceMappingURL=mysass.css.map */

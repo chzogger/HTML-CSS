@@ -19,12 +19,7 @@ div.detail {
     max-width: 1200px;
 }
 
-/* Background: fixed kann auf Mobile ruckeln -> fallback */
-@media (max-width: 800px) {
-    body {
-        background-attachment: scroll;
-    }
-}
+
 
 /* 1) Navigation / Title Liste: auf kleinen Screens untereinander */
 
@@ -58,6 +53,12 @@ div.detail {
     }
 }
 
+/* Background: fixed kann auf Mobile ruckeln -> fallback */
+@media (max-width: 800px) {
+    body {
+        background-attachment: scroll;
+    }
+}
 /* 2) Lia-Bilder: nebeneinander auf groß, untereinander auf klein */
 @media (max-width: 800px) {
     .lia {
@@ -70,25 +71,6 @@ div.detail {
         max-height: 320px;
         width: 100%;
     }
-}
-
-@media (max-width: 700px) {
-    .lebenslauf {
-        grid-template-columns: 1fr;
-    }
-
-    .Spalte1,
-    .Spalte2,
-    .Spalte3 {
-        display: none;
-        font-size: 1em;
-    }
-
-}
-/* 3) Tabellen: graceful degradation
-   - Alte Browser: Tabelle darf horizontal scrollen statt Layout zu sprengen */
-table {
-    width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -112,6 +94,29 @@ td img {
         /* kleiner auf Mobile */
     }
 }
+
+
+
+@media (max-width: 700px) {
+    .lebenslauf {
+        grid-template-columns: 1fr;
+    }
+
+    .Spalte1,
+    .Spalte2,
+    .Spalte3 {
+        display: none;
+        font-size: 1em;
+    }
+
+}
+/* 3) Tabellen: graceful degradation
+   - Alte Browser: Tabelle darf horizontal scrollen statt Layout zu sprengen */
+table {
+    width: 100%;
+}
+
+
 
 /* 4) Formular: fallback (Flex -> alles 100% auf klein) */
 @media (max-width: 650px) {

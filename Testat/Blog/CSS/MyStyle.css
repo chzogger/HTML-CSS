@@ -1,7 +1,10 @@
 @import url(normalize.css);
 @import url(basis.css);
+@import url(mysass.css);
 @import url(tabellen.css);
 @import url(news.css);
 @import url(formular.css);
 @import url(uebermich.css);
 @import url(responsive.css);
+
+

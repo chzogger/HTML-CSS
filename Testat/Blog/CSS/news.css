@@ -9,16 +9,7 @@ div.news {
     padding: 20px;
 }
 
-/* Jede News-Karte (die inneren divs) */
-div.news>div {
-    background-color: rgba(44, 44, 44, 0.5);
-    border-radius: 15px;
-    padding: 20px;
 
-    /* sorgt für "Karten"-Look */
-    border: 2px solid rgba(187, 16, 135, 0.4);
-    box-shadow: -1px 2px white;
-}
 
 /* Überschrift in der Karte */
 div.news>div h1.news-title {
@@ -51,6 +42,8 @@ div.news img {
     border-radius: 10px;
     display: block;
 }
+
+
 
 p.news-text {
     box-sizing: border-box;

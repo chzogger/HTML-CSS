@@ -1,0 +1,41 @@
+@use '_variable' as v;
+@use 'sass:math';
+
+
+
+@mixin theme() {
+  color: v.$Themecolor;
+  margin-top: 35px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 55px;
+    font-family: v.$Schrift;
+    text-shadow: v.$TextSchatten;
+    padding-left: 10px;
+}
+
+div.title {
+  @include theme();             // nutzt Default aus v.$Themecolor
+}
+
+
+@mixin card() {
+    background-color:v.$BackgroundNews;
+    border-radius: 15px;
+    padding: 20px;
+
+    /* sorgt für "Karten"-Look */
+    border: v.$KartenrandNews;
+    box-shadow: v.$Kartenschatten;
+
+}
+
+
+/* Jede News-Karte (die inneren divs) */
+div.news>div {
+    @include card();
+    
+}
+
+

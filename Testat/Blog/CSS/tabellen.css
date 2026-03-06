@@ -18,30 +18,7 @@ li.img {
 
 
 
-table.hobbies {
-    border-style: none;
-}
 
-table.hobbies th {
-    font-size: 40px;
-    text-align: center;
-        padding: 0px 10px 0px 10px;
-    border-style: none;
-    }
-    
-    td img {
-        width: 100%;
-        height: 400px;
-        /* gleiche Höhe für alle Bilder */
-        object-fit: cover;
-        /* Bild wird passend zugeschnitten */
-        border-radius: 8px;
-        border-style: none;
-    }
-    
-    .hobbies td {
-        padding-right: 0.5em;
-}
 
 
 
@@ -51,27 +28,7 @@ td.time {
     border-color: white;
 }
 
-table.florian td {
-    border-style: none;
-    font-family: "Google Sans", sans-serif;
-    color: white;
-    font-size: 25px;
-    font-family: "Google Sans", sans-serif;
-    padding-left: 10px;
-}
 
-table.florian tr td:first-child {
-    padding-right: 20px;
-    font-weight: bold;
-}
-.lebenslauf {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    /* Zeitpunkt | Tätigkeit | Arbeitsort */
-    gap: 0.5em 10px;
-    max-width: 1200px;
-    margin: 40px auto;
-}
 
 .Spalte1,
 .Spalte2,

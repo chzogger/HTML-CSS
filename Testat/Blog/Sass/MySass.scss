@@ -38,4 +38,14 @@ div.news>div {
     
 }
 
+/* Background: fixed kann auf Mobile ruckeln -> fallback */
+@mixin mobile-scale($width) {
+  @media (max-width: $width) {
+    body {
+      background-attachment: scroll;
+    }
+  }
+}
+
+@include mobile-scale(v.$min-width*2)
 

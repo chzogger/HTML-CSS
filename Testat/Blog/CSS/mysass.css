@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*Titel von jeder Seite und Haus*/
 /*Karten der News Seite*/
+/*Media Berechnung*/
 div.title {
   color: rgb(187, 16, 135);
   margin-top: 35px;
@@ -23,4 +24,10 @@ div.news > div {
   box-shadow: -1px 2px white;
 }
 
+/* Background: fixed kann auf Mobile ruckeln -> fallback */
+@media (max-width: 800px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 /*# sourceMappingURL=mysass.css.map */

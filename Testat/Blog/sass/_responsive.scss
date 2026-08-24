@@ -1,0 +1,121 @@
+// ===== _responsive.scss =====
+
+// 0) Basis-Fallback: läuft in jedem Browser
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+}
+
+// 1) Bilder in Tabellen/Karten auf Mobile verkleinern
+@media (max-width: 800px) {
+  .lia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lia img {
+    height: auto;
+    max-height: 320px;
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  td img {
+    height: 240px; // kleiner auf Mobile
+  }
+}
+
+// 2) Navigation / Titel-Liste: auf kleinen Screens untereinander
+@media (max-width: 700px) {
+  ul.title {
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  li.img {
+    max-width: 260px;
+  }
+
+  div.welcome {
+    font-size: 42px;
+    margin: 12px;
+  }
+
+  div.title {
+    font-size: 34px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  a.house {
+    font-size: 42px;
+  }
+
+  .lebenslauf {
+    grid-template-columns: 1fr;
+  }
+
+  .Spalte1,
+  .Spalte2,
+  .Spalte3 {
+    display: none;
+    font-size: 1em;
+  }
+}
+
+// 3) Formular: Fallback (Flex -> alles 100% auf klein)
+@media (max-width: 650px) {
+  .formular {
+    flex: 0 0 100%;
+  }
+
+  .newsletter {
+    white-space: normal;
+    flex-wrap: wrap;
+  }
+}
+
+// ===== Moderne Browser: Verbesserungen =====
+
+// 4) Moderne Typografie (wenn clamp unterstützt)
+@supports (font-size: clamp(16px, 2vw, 24px)) {
+  p {
+    font-size: clamp(16px, 2.2vw, 22px);
+  }
+}
+
+// 5) News: modernes Grid nur wenn Grid unterstützt wird
+@supports (display: grid) {
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+}
+
+// 6) :has()-Regeln vermeiden (Graceful Degradation)
+// Fallback-Klassen, falls sie im HTML zusätzlich gesetzt werden
+.formular.full,
+.formular.newsletter-box {
+  flex: 0 0 100%;
+}

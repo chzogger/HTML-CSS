@@ -1,0 +1,23 @@
+@use '_variables' as v;
+
+// ------------------------------
+// News-Übersicht: Grid-Layout
+// ------------------------------
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+// ------------------------------
+// Grössere, fixe Breiten (Detailseite)
+// ------------------------------
+div.detail {
+  width: 1200px;
+  max-width: 100%;
+  margin: auto;
+}

@@ -1,0 +1,53 @@
+ul.title {
+
+    color: rgba(187, 16, 135);
+    font-size: 55px;
+    font-family: "Google Sans", sans-serif;
+    text-shadow: 2px 2px 2px rgb(224, 210, 220);
+    text-align: center;
+    list-style-type: none;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+td.time {
+    color: rgba(187, 16, 135);
+    text-shadow: 1px 1px 1px rgb(190, 144, 177);
+    border-color: white;
+}
+
+
+
+.Spalte1,
+.Spalte2,
+.Spalte3 {
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(187, 16, 135);
+    text-shadow: 1px 1px 3px rgb(243, 243, 243);
+
+    border-bottom: 2px solid rgb(187, 16, 135);
+    padding-bottom: 5px;
+}
+
+.Zeitpunkt {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.Tätigkeit {
+    color: white;
+    font-size: 1.7em;
+}
+
+.Arbeitsort {
+    color: white;
+    font-size: 1.4em;
+}

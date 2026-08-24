@@ -1,0 +1,202 @@
+/* Farbschema an das Testat (Blog/sass/_variables.scss) angeglichen:
+   Themecolor rgb(187,16,135), Google Sans, dunkle Karten mit Pink-Rand,
+   Hintergrundbild wie im Blog. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+}
+
+html {
+  line-height: 1.5;
+  font-family: "Google Sans", sans-serif;
+  font-weight: normal;
+  color: white;
+}
+
+.Header {
+  margin: 0 0 20px 0;
+  padding: 20px 14px 10px 14px;
+  color: rgb(187, 16, 135);
+  background-color: transparent;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 2px rgb(190, 144, 177);
+}
+
+.Badge {
+  background-color: rgb(187, 16, 135);
+  color: white;
+  float: right;
+  font-size: 60%;
+  padding: 4px 8px;
+  min-width: 12%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.Background {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a;
+  background-image: url("./images/BG1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* "fixed" statt "scroll": Bei "scroll" würde die Bildgrösse (cover) an die
+     tatsächliche, mit der Artikelliste wachsende Elementhöhe gekoppelt und
+     dadurch bei langen Listen stark verzerrt/gezoomt. Mit "fixed" bezieht sich
+     "cover" stattdessen auf die Viewport-Grösse (unabhängig von der Listenlänge). */
+  background-attachment: fixed;
+}
+
+.Main {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  padding-bottom: 40px;
+}
+
+.Row {
+  background-color: rgba(44, 44, 44, 0.6);
+  color: white;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+  border-radius: 15px;
+  border: 2px solid rgba(187, 16, 135, 0.4);
+  box-shadow: -1px 2px white;
+}
+
+.Row.ListRow:hover {
+  background-color: rgba(44, 44, 44, 0.85);
+  border-color: rgb(187, 16, 135);
+  cursor: pointer;
+}
+
+.Row.ListRow:hover .Badge {
+  background-color: white;
+  color: rgb(187, 16, 135);
+}
+
+.Spacer {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.ListRow .Title,
+.KarteRow .Title {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: rgb(204, 89, 169);
+  border-bottom: 1px solid rgba(187, 16, 135, 0.4);
+  padding-bottom: 6px;
+}
+
+.ListRow p {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.Emphasis {
+  text-transform: none;
+  font-family: "Google Sans", sans-serif;
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------------- */
+/* ArtikelComposer (Formular für neue Artikel)                        */
+/* ----------------------------------------------------------------- */
+.ArtikelComposer .Head {
+  border-bottom: none;
+}
+
+.ArtikelComposer .Title {
+  margin: 0 0 5px 0;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: rgb(204, 89, 169);
+}
+
+.ArtikelComposer input,
+.ArtikelComposer textarea {
+  color: white;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: rgba(230, 222, 222, 0.15);
+  border: solid 2px rgb(187, 16, 135);
+  border-radius: 0.5em;
+  padding: 8px;
+}
+
+.ArtikelComposer input::placeholder,
+.ArtikelComposer textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ArtikelComposer input:hover,
+.ArtikelComposer textarea:hover {
+  background-color: rgba(230, 222, 222, 0.3);
+}
+
+.ArtikelComposer input:focus,
+.ArtikelComposer textarea:focus {
+  border-color: rgb(204, 89, 169);
+  outline: 0;
+  background-color: rgba(230, 222, 222, 0.3);
+}
+
+.ArtikelComposer .Description {
+  margin-top: 10px;
+  resize: vertical;
+}
+
+.ButtonBar {
+  border-top: 1px solid rgba(187, 16, 135, 0.4);
+  padding-top: 15px;
+}
+
+.Button {
+  display: inline-block;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: rgb(187, 16, 135);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 20px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.Button:hover {
+  filter: brightness(0.85);
+}
+
+.Button:disabled {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(120, 120, 120, 0.6);
+  cursor: not-allowed;
+}
+
+.Button:disabled:hover {
+  filter: none;
+}

@@ -1,0 +1,100 @@
+@use '_variables' as v;
+@use '_mixins' as m;
+
+// ------------------------------
+// Grundlegende Einstellungen
+// ------------------------------
+body {
+  background-image: url("../images/BG1.jpg");
+  background-size: cover; // Bild füllt den Bildschirm
+  background-position: center; // Bild bleibt zentriert
+  background-repeat: no-repeat; // kein Kacheln
+  background-attachment: fixed; // bleibt beim Scrollen stehen
+  padding-left: 10px;
+  padding-bottom: 2.5%;
+  font-family: v.$Schrift;
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 25px;
+  font-family: v.$Schrift;
+  margin: auto;
+  padding-top: 4px;
+  padding-left: 10px;
+}
+
+p.welcome {
+  font-size: 20px;
+  font-family: v.$Schrift;
+}
+
+p.detail {
+  color: rgba(255, 255, 255, 0.8);
+  font: bold;
+  padding-top: 100px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// ------------------------------
+// Links
+// ------------------------------
+a {
+  text-decoration: none;
+  color: rgb(187, 16, 135);
+}
+
+a:hover {
+  color: white;
+  cursor: grab;
+}
+
+// ------------------------------
+// Zitate
+// ------------------------------
+blockquote {
+  border-left: 5px solid rgb(82, 16, 16);
+  padding-left: 1rem;
+  margin: 3rem 0;
+  font-style: italic;
+  color: blanchedalmond;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+// ------------------------------
+// Skip-Link für Barrierefreiheit
+// ------------------------------
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  background: v.$Themecolor;
+  color: white;
+  z-index: 1000;
+}
+
+// Fixiertes Hintergrundbild ruckelt auf Mobile -> ab hier scroll statt fixed
+@include m.mobile-scale(v.$min-width * 2);

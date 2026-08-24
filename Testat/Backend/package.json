@@ -1,0 +1,9 @@
+{
+  "name": "testat-backend",
+  "version": "1.0.0",
+  "description": "Einfacher Node.js-Server (nur Core-Module) zur Speicherung der News-Artikel als JSON-Datei.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

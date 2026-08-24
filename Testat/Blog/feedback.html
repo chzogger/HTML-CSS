@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+    <div class="title"> Feedback <a class="house" href="index.html">&#127968;</a></div>
+
+    <nav>
+        <ul class="title">
+            <li><a href="ueber.html">Über Mich</a></li>
+            <li><a href="lebenslauf.html">Lebenslauf</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="index.html">News</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <p class="feedback">
+            Sehr gerne können Sie mir ein Feedback hinterlassen.
+            <br>
+            Bitte füllen Sie folgendes Formular aus:
+        </p>
+        <form>
+
+            <div>
+                <div class="formular"><label class="vorname">Vorname:
+                        <input type="text" name="vorname" placeholder="Vorname"></label></div>
+                <div class="formular"><label class="nachname"> Nachname:
+                        <input type="text" name="nachname" placeholder="Nachnme"></label></div>
+                <div class="formular"><label class="birthday">Geburtstag:
+                        <input type="date" name="geburtstag" placeholder="Geburtstag"></label></div>
+                <div class="formular"><label class="email"> E-Mail:
+                        <input type="email" name="email" placeholder="Ihre E-Mail Adresse"></label>
+                </div>
+                <div class="formular newsletter-box">
+                    <label class="newsletter">
+                        Möchten Sie den Newsletter abonnieren?
+                        <input type="checkbox">
+                    </label>
+                </div>
+
+                <div class="formular"><label class="message">Ihre Mitteilung:
+                        <textarea class="TextFeld" type="text" name="text" placeholder=""></textarea></label></div>
+
+                <div class="formular"><input type="submit" name="submit" value="Absenden !">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

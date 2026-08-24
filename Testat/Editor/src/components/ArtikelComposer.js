@@ -25,36 +25,34 @@ export default function ArtikelComposer({ alleArtikel, beiAbbrechen, beiSpeicher
         beiSpeichern(neuerArtikel);
     };
 
-    return (
-        <div className="Row ArtikelComposer Spacer">
-            <div className="Head">
-                <h1 className="Title">
-                    <input
-                        className="Title"
-                        autoFocus
-                        name="titel"
-                        type="text"
-                        value={artikelTitel}
-                        onChange={(e) => setArtikelTitel(e.target.value)}
-                        placeholder="Der Titel des Artikels."
-                    />
-                </h1>
-                <textarea
-                    className="Description"
-                    name="text"
-                    value={artikelText}
-                    onChange={(e) => setArtikelText(e.target.value)}
-                    placeholder="Der Text des Artikels."
-                    rows={4}
+    return <div className="Row ArtikelComposer Spacer">
+        <div className="Head">
+            <h1 className="Title">
+                <input
+                    className="Title"
+                    autoFocus
+                    name="titel"
+                    type="text"
+                    value={artikelTitel}
+                    onChange={(e) => { setArtikelTitel(e.target.value) }}
+                    placeholder="Der Titel des Artikels."
                 />
-            </div>
-
-            <div className="ButtonBar">
-                <button className="Button" onClick={saveGeklickt} disabled={!formularVollstaendig}>
-                    Speichern
-                </button>
-                <button className="Button" onClick={beiAbbrechen}>Abbrechen</button>
-            </div>
+            </h1>
+            <textarea
+                className="Description"
+                name="text"
+                value={artikelText}
+                onChange={(e) => { setArtikelText(e.target.value) }}
+                placeholder="Der Text des Artikels."
+                rows={4}
+            />
         </div>
-    );
+
+        <div className="ButtonBar">
+            <button className="Button"
+                onClick={saveGeklickt}
+                disabled={!formularVollstaendig}>Speichern</button>
+            <button className="Button" onClick={beiAbbrechen}>Abbrechen</button>
+        </div>
+    </div>
 }

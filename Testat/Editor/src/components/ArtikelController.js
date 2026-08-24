@@ -46,18 +46,18 @@ export default function ArtikelController() {
         });
     };
 
-    return (
-        <div>
-            <ArtikelListe alleArtikel={alleArtikel} beiLoeschen={artikelLoeschen} />
-            {composerAktiv ? (
-                <ArtikelComposer
-                    alleArtikel={alleArtikel}
-                    beiAbbrechen={versteckeComposer}
-                    beiSpeichern={neuenArtikelSpeichern}
-                />
-            ) : (
-                <InaktiverArtikelComposer beiClick={zeigeComposer} />
-            )}
-        </div>
-    );
+    return <div>
+        <ArtikelListe alleArtikel={alleArtikel} beiLoeschen={artikelLoeschen} />
+        {composerAktiv ? <ArtikelComposer
+            alleArtikel={alleArtikel}
+            beiAbbrechen={versteckeComposer}
+            beiSpeichern={neuenArtikelSpeichern}
+
+        /> : <InaktiverArtikelComposer beiClick={zeigeComposer}
+
+        />
+
+        }
+    </div>
+
 }

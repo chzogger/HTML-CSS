@@ -1,34 +1,38 @@
-# Testat – News-Blog (WT1 + WT2)
+# Testat
 
-Drei Teile, die zusammenspielen:
+Mein Projekt besteht aus drei Teilen: **Backend**, **Blog** (Frontend) und **Editor**.
 
-- **Backend** – Node.js-Server (nur Core-Module, kein Framework), speichert die News-Artikel in `Backend/store/articles.json`.
-- **Blog** – Statisches HTML/CSS/JS-Frontend, zeigt die News-Liste an. Lädt die Artikel per `fetch` vom Backend.
-- **Editor** – React-Anwendung (Create React App) zum Hinzufügen und Löschen von News-Artikeln.
+- Backend: Node.js-Server, speichert die News-Artikel als JSON-Datei
+- Blog: die eigentliche Webseite, zeigt die News an
+- Editor: React-App, damit ich News-Artikel hinzufügen/löschen kann
 
-## Starten
+## Wie startet man das?
 
-**1. Backend** (Port 5000, immer zuerst starten):
+Es braucht 3 Terminals, alle drei müssen gleichzeitig laufen.
+
+**1. Backend starten (Port 5000)**
 ```bash
 cd Backend
 npm start
 ```
 
-**2. Blog-Frontend** (z. B. Port 5501/5502, beliebiger statischer Server):
+**2. Blog starten (Port 5501)**
 ```bash
 cd Blog
-npx serve . -l 5501
+npx http-server . -p 5501 -c-1
 ```
-Danach `http://localhost:5501/index.html` im Browser öffnen. Ohne laufendes Backend bleibt die News-Liste leer.
+Danach im Browser öffnen: http://localhost:5501/index.html
 
-**3. Editor** (Port 3000):
+**3. Editor starten (Port 3000)**
 ```bash
 cd Editor
-npm install   # einmalig
+npm install
 npm start
 ```
-Danach `http://localhost:3000` im Browser öffnen. Neue Artikel werden sofort im Backend gespeichert und erscheinen nach einem Reload auch im Blog-Frontend.
+Öffnet sich automatisch im Browser: http://localhost:3000
+(`npm install` nur beim allerersten Mal nötig)
 
-## Hinweis
+## Wichtig
 
-Backend und Editor müssen parallel laufen (zwei Terminals), damit das Zusammenspiel funktioniert.
+- Immer zuerst das Backend starten, sonst zeigt der Blog keine News an.
+- Im Editor neue Artikel hinzufügen oder löschen -> wird direkt im Backend gespeichert und ist danach auch im Blog sichtbar (Seite neu laden).

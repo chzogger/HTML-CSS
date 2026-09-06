@@ -1,7 +1,4 @@
-// Variante über statisches JSON-File (WT1)
-// const url = "json/articles.json";
-
-// Variante über Node.js-Backend (WT2) - Backend muss laufen (Testat/Backend, npm start)
+// Backend muss laufen (Testat/Backend, npm start), sonst bleibt die Liste leer
 const url = "http://localhost:5000/articles";
 
 function loadArticles() {
